@@ -8,7 +8,7 @@ import { Http, Response, Headers, RequestOptions  } from '@angular/http';
   styleUrls: ['./map-cmp.component.css']
 })
 export class MapCmpComponent implements OnInit {
-  test="default";
+  id;
   httpdata;
   lat: number = 38.931001;
   lng: number = -77.0512221;
@@ -38,10 +38,19 @@ export class MapCmpComponent implements OnInit {
 
   displaydata(data){
     this.httpdata = JSON.parse(data);
+    console.log(data);
   }
 
-  update(event){
-    this.test="clicked";
+  myfunction(id: any){
+    console.log(id)
+    var body = id
+    this.http.post('https://zootropolis.herokoapp.com/Animal/increment',id).
+    map (
+      (response) => response.text()
+    ).subscribe (
+      (data) => {console.log(data)}
+    )
+    
   }
 
 
