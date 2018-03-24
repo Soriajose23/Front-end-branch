@@ -38,13 +38,12 @@ export class MapCmpComponent implements OnInit {
 
   displaydata(data){
     this.httpdata = JSON.parse(data);
-    console.log(data);
   }
 
   myfunction(id: any){
     console.log(id)
     var body = id
-    this.http.post('https://zootropolis.herokoapp.com/Animal/increment',id).
+    this.http.post('https://zootropolis.herokuapp.com/Animal/increment',id).
     map (
       (response) => response.text()
     ).subscribe (
