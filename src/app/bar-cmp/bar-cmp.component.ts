@@ -6,7 +6,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
   styleUrls: ['./bar-cmp.component.css']
 })
 export class BarCmpComponent implements OnInit {
-    stuff;
+  stuff: {}[] = [];
     httpdata;
     data;
   width = 600;
@@ -42,7 +42,6 @@ export class BarCmpComponent implements OnInit {
        }
     
        display(data){
-        
         var i = 0;
         this.httpdata = JSON.parse(data)
         console.log(this.httpdata)
