@@ -41,9 +41,12 @@ export class MapCmpComponent implements OnInit {
   }
 
   myfunction(id: any){
+    const headers = new Headers();
+    headers.append('Content-Type', "application/json");
+    const options = new RequestOptions({headers: headers});
     console.log(id)
     var body = id
-    this.http.post('https://zootropolis.herokuapp.com/Animal/increment',id).
+    this.http.post('https://zootropolis.herokuapp.com/Animal/increment',id.toString(),options).
     map (
       (response) => response.text()
     ).subscribe (
