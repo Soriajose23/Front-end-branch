@@ -44,7 +44,6 @@ export class BarCmpComponent implements OnInit {
        display(data){
         var i = 0;
         this.httpdata = JSON.parse(data)
-        console.log(this.httpdata)
        for (var key in this.httpdata) {
              if (this.httpdata.hasOwnProperty(key)) {
            var val = this.httpdata[key];
