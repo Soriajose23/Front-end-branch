@@ -27,6 +27,7 @@ import { AuthGaurdService } from './auth-gaurd.service';
 import { AuthService } from './auth.service';
 import { InventoryCmpComponent } from './inventory-cmp/inventory-cmp.component';
 import { AnimalCmpComponent } from './animal-cmp/animal-cmp.component';
+import { FooterCmpComponent } from './footer-cmp/footer-cmp.component';
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: '/app-home-cmp', pathMatch: 'full' },
@@ -56,7 +57,8 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
     PieCmpComponent,
     BarCmpComponent,
     InventoryCmpComponent,
-    AnimalCmpComponent
+    AnimalCmpComponent,
+    FooterCmpComponent
   ],
   imports: [
     BrowserModule,
