@@ -14,6 +14,7 @@ export class AuthService {
       alert("Please Login")
       this.router.navigate(['app-login-cmp'])
     }
+
     else {
     const helper = new JwtHelperService();
     const decodedToken = helper.decodeToken(token);
